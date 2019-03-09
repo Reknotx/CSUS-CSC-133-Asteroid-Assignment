@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import com.mycompany.a1.Missile.MissileType;
 
-public class GameWorld
+public class GameWorld	
 {
 	public enum EntityType { PLAYER, ASTEROID, ENEMY, MISSILE }
 	private ArrayList<GameObject> list;
@@ -607,6 +607,7 @@ public class GameWorld
 			{
 				if (iterator.next() instanceof PlayerShip)
 				{
+					iterator.ResetIndex();
 					return true;
 				}
 			}

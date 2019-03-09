@@ -1,6 +1,6 @@
 package com.mycompany.a1;
 
-public class FixedGameObject extends GameObject
+public abstract class FixedGameObject extends GameObject
 {
 	private static int id = 0;
 	

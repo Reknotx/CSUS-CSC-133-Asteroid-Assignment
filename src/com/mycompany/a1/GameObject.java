@@ -3,7 +3,7 @@ import java.util.Random;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.ui.geom.Point2D;
 
-public class GameObject 
+public abstract class GameObject 
 {
 	public Random rng = new Random();
 	private Point2D location;
