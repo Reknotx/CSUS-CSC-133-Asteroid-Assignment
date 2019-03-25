@@ -25,15 +25,9 @@ public class MissileLauncher extends MoveableGameObject implements ISteerable
 	{
 		SetDirection(amount);
 	}
-	
+		
 	@Override
-	public void Move() 
-	{
-
-	}
-	
-	@Override
-	public void ChangeDir(int amount)
+	public void Steer(int amount)
 	{
 		SetDirection(GetDirection() + amount);
 	}

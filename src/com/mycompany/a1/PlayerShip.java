@@ -40,14 +40,14 @@ public class PlayerShip extends MoveableGameObject implements ISteerable
 		SetLocation(512.0, 384.0);
 	}
 	
-	public void AdjustSpeed(boolean amount)
+	public void AdjustSpeed(boolean increase)
 	{
-		if (amount && GetSpeed() < 15)
+		if (increase && GetSpeed() < 15)
 		{
 			//Increase speed
 			SetSpeed(GetSpeed() + 1);
 		}
-		else if (!amount && GetSpeed() > 0)
+		else if (!increase && GetSpeed() > 0)
 		{
 			//Decrease speed
 			SetSpeed(GetSpeed() - 1);
@@ -61,7 +61,7 @@ public class PlayerShip extends MoveableGameObject implements ISteerable
 	}
 	
 	@Override
-	public void ChangeDir(int amount) 
+	public void Steer(int amount) 
 	{
 		if (GetDirection() == 0 && amount < 0)
 		{
@@ -75,7 +75,7 @@ public class PlayerShip extends MoveableGameObject implements ISteerable
 	
 	public void ChangeLauncherDir(int amount)
 	{
-		launcher.ChangeDir(amount);
+		launcher.Steer(amount);
 	}
 
 	public String toString()

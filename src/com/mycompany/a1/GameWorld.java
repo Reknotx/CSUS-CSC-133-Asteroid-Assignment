@@ -107,12 +107,12 @@ public class GameWorld
 			if (turnRight)
 			{
 				//Rotate player clockwise (right)
-				playerObj.ChangeDir(1);
+				playerObj.Steer(1);
 			}
 			else
 			{
 				//Rotate player counter-clockwise (left)
-				playerObj.ChangeDir(-1);
+				playerObj.Steer(-1);
 			}
 		}
 	}
@@ -422,7 +422,7 @@ public class GameWorld
 	 * When called searches through the list to find an instance of PlayerShip
 	 * @return Reference to PlayerShip location in list if it exists, null otherwise.
 	 */
-	public PlayerShip FindPlayer()
+	private PlayerShip FindPlayer()
 	{
 		int i = -1;
 		PlayerShip temp = null;
@@ -449,7 +449,7 @@ public class GameWorld
 	 * When called searches through the list to find an instance of Asteroid
 	 * @return Reference to Asteroid location in list if it exists, null otherwise.
 	 */
-	public Asteroid FindAsteroid()
+	private Asteroid FindAsteroid()
 	{
 		int i = -1;
 		Asteroid temp = null;
@@ -476,7 +476,7 @@ public class GameWorld
 	 * When called searches through the list to find an instance of EnemyShip
 	 * @return Reference to EnemyShip location in list if it exists, null otherwise.
 	 */
-	public EnemyShip FindEnemy()
+	private EnemyShip FindEnemy()
 	{
 		int i = -1;
 		EnemyShip temp = null;
@@ -504,7 +504,7 @@ public class GameWorld
 	 * over zero. Meant purely for firing missiles from enemy ship.
 	 * @return Reference to EnemyShip location in list if it exists and has missiles to fire, null otherwise.
 	 */
-	public EnemyShip FindEnemyWithMissiles()
+	private EnemyShip FindEnemyWithMissiles()
 	{
 		int i = -1;
 		EnemyShip temp = null;
@@ -539,7 +539,7 @@ public class GameWorld
 	 * @param type - Determines the missile type to search for, either PLAYER or ENEMY
 	 * @return Reference to Missile location in list if type matches, null otherwise
 	 */
-	public Missile FindMissile(MissileType type)
+	private Missile FindMissile(MissileType type)
 	{
 		int i = -1;
 		Missile temp = null;
@@ -573,7 +573,7 @@ public class GameWorld
 	 * When called searches through the list to find an instance of SpaceStation.
 	 * @return Reference to the Station location in list if one exists, null otherwise
 	 */
-	public SpaceStation FindStation()
+	private SpaceStation FindStation()
 	{
 		int i = -1;
 		SpaceStation temp = null;
@@ -599,7 +599,7 @@ public class GameWorld
 	/**
 	 * @return true if there exists an instance of player and lives are not 0, false otherwise.
 	 */
-	public boolean FindInstanceOfPlayer()
+	private boolean FindInstanceOfPlayer()
 	{
 		if (list.size() > 0 && !gameOver)
 		{
