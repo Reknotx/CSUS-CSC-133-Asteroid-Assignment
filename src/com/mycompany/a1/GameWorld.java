@@ -9,7 +9,7 @@ public class GameWorld
 {
 	public enum EntityType { PLAYER, ASTEROID, ENEMY, MISSILE }
 	private ArrayList<GameObject> list;
-	GameObjectIterator iterator;
+	private GameObjectIterator iterator;
 	
 	private int score;
 	private int elapsedTime;
